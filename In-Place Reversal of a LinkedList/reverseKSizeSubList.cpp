@@ -71,6 +71,6 @@ int main(int argc, char *argv[]) {
 }
 
 /*
-Time Complexity is O()
-Space Complexity is O()
+Time Complexity is O(N)
+Space Complexity is O(1)
 */
