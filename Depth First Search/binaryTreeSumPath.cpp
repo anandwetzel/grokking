@@ -32,10 +32,12 @@ class TreeNode {
 class TreePathSum {
  public:
   static bool hasPath(TreeNode *root, int sum) {
-    int runningSum = 0;
-    if(runningSum == sum) return true;
-    
-    return false;
+    if(root == nullptr) return false;
+    sum -= root->val;
+    if(sum == 0 && root->left == nullptr && root->right == nullptr){
+        return true;
+    }
+    return hasPath(root->left, sum) || hasPath(root->right, sum);
   }
 };
 
