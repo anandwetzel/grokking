@@ -56,7 +56,7 @@ class SlidingWindowMedian {
                 if(maxHeap.size() == minHeap.size()){
                     result[i - k + 1] = maxHeap.top() / 2.0 + minHeap.top() / 2.0;
                 }else result[i - k + 1] = maxHeap.top();
-                int elRemove = result[i - k + 1];
+                int elRemove = nums[i - k + 1];
                 if(elRemove <= maxHeap.top()){
                     maxHeap.remove(elRemove);
                 }else minHeap.remove(elRemove);
