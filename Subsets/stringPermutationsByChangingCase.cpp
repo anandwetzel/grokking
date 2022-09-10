@@ -23,9 +23,9 @@ class LetterCaseStringPermutation {
     if(str == "") return permutations;
     permutations.push_back(str);
     for(int i = 0; i < str.length(); i++){
-        if(isalpha(str[i])){
+        if(isalpha(str[i])){ // if its a char
             int n = permutations.size();
-            for(int j = 0; j < n; j++){
+            for(int j = 0; j < n; j++){ // push back each version after changing case
                 vector<char> strs(permutations[j].begin(), permutations[j].end());
                 if(isupper(strs[i])){
                     strs[j] = tolower(strs[j]);
